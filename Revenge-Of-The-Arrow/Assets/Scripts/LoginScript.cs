@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
+using Facebook.Unity;
+using LoginResult = PlayFab.ClientModels.LoginResult;
 
 public class LoginScript : MonoBehaviour
 {
@@ -16,16 +18,40 @@ public class LoginScript : MonoBehaviour
     private void AddEvent()
     {
         btnGuest.onClick.AddListener(GuestLogin);
+        btnGoogle.onClick.AddListener(GoogleLogin);
+        btnFb.onClick.AddListener(() =>
+        {
+            FB.Init(FacebookLogin);
+        });
     }
     private void GuestLogin()
     {
         var request = new LoginWithCustomIDRequest { CustomId = DeviceUniqueIdentifier, CreateAccount = true };
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginGuestSuccess, OnError);
+        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnError);
     }
 
-    private void OnLoginGuestSuccess(LoginResult result)
+    private void GoogleLogin()
     {
-        Debug.Log("Login as Guest: " + result.PlayFabId);
+        var request = new LoginWithGoogleAccountRequest { CreateAccount = true };
+        PlayFabClientAPI.LoginWithGoogleAccount(request, OnLoginSuccess, OnError);
+    }
+
+    private void FacebookLogin()
+    {
+        FB.LogInWithReadPermissions(null, OnFacebookLoggedIn);
+    }
+
+    private void OnFacebookLoggedIn(ILoginResult result)
+    {
+        if (result == null || string.IsNullOrEmpty(result.Error))
+        {
+            var request = new LoginWithFacebookRequest { CreateAccount = true, AccessToken = AccessToken.CurrentAccessToken.TokenString };
+            PlayFabClientAPI.LoginWithFacebook(request, OnLoginSuccess, OnError);
+        }
+    }
+    private void OnLoginSuccess(LoginResult result)
+    {
+        Debug.Log("Login: " + result.PlayFabId);
     }
 
     private void OnError(PlayFabError error)
