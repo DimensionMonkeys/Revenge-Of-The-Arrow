@@ -537,6 +537,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopBtn: {fileID: 2045052}
   leaderBoardBtn: {fileID: 338127099}
+  shopItemBtn: {fileID: 2121003100}
+  shopRechargeBtn: {fileID: 2025102119}
+  shopItemView: {fileID: 1541984118}
+  shopRechargeView: {fileID: 728261924}
+--- !u!114 &728261924 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7486804383951769472, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
+  m_PrefabInstance: {fileID: 1531590671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915f97152333f7c459aa24faaf2dbd2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &751112882
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,50 +922,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 751112886}
     m_Modifications:
-    - target: {fileID: 1170113490000894118, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1170113490000894118, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1170113490000894118, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1170113490000894118, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1729112560827334783, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1729112560827334783, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1729112560827334783, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030293330210821330, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030293330210821330, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6502959812297338154, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6502959812297338154, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8518973163765695124, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1039,18 +1010,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop _ Recharge UI
       objectReference: {fileID: 0}
-    - target: {fileID: 8518973163765695127, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546394114797632952, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8546394114797632952, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -17
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
 --- !u!224 &1531590672 stripped
@@ -1067,6 +1026,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aae3fad352a0fa41ad43488052e016a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1541984118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1507812768395522938, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
+  m_PrefabInstance: {fileID: 1531590671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92475697707b9a94c81536dab489d8cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2025102119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 771483023, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
+  m_PrefabInstance: {fileID: 1531590671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2121003100 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 757216337, guid: 82a77e4ee3fdfe346a74454c69971e36, type: 3}
+  m_PrefabInstance: {fileID: 1531590671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2211405696638875496

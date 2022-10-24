@@ -59,10 +59,25 @@ public class ViewManager : MonoBehaviour
         v_instance._currentView = view;
     }
 
+    public static void Show(View viewTab, View view)
+    {
+        viewTab.Hide();
+        view.Show();
+    }
+
     // stack remove view and return it
     public static void showLast()
     {
         if(v_instance._history.Count != 0)
+        {
+            Show(v_instance._history.Pop(), false);
+        }
+    }
+
+    public static void showBeforeLast()
+    {
+        v_instance._history.Pop();
+        if (v_instance._history.Count != 0)
         {
             Show(v_instance._history.Pop(), false);
         }
